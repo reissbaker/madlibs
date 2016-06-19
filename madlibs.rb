@@ -24,9 +24,7 @@ def parse_word(memory, word)
 end
 
 def get_value(memory, key)
-  if memory.has_key?(key)
-    return memory[key]
-  end
+  return memory[key] if memory.has_key?(key)
 
   STDERR.puts("Please enter a value for #{key[1..-1]}")
   value = STDIN.gets.chomp
@@ -35,12 +33,13 @@ def get_value(memory, key)
 end
 
 filepath = ARGV.first
-raise "No path given" if filepath.nil? || filepath.empty?
+
+if filepath.nil? || filepath.empty?
+  STDERR.puts("No path given")
+  exit(2)
+end
 
 madlib = generate_madlib(filepath)
 
-if STDOUT.isatty
-  STDERR.puts("\nGenerated:\n====================================\n")
-end
-
-puts madlib
+STDERR.puts("\nGenerated:\n====================================\n") if STDOUT.isatty
+STDOUT.puts(madlib)
