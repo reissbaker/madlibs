@@ -1,7 +1,7 @@
 # Setup
 
 ```bash
-git clone git://github.com:reissbaker/madlibs.git && cd madlibs && "${EDITOR:-vi}" madlibs.txt
+git clone git@github.com:reissbaker/madlibs.git && cd madlibs && "${EDITOR:-vi}" madlibs.txt
 ```
 
 # Run
