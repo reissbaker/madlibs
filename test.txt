@@ -1,0 +1,11 @@
+Hello $their_name,
+
+I'm very interested in your house at $address. I am a magical unicorn creature
+and would like to graze upon your grass and grant you $number wishes. Please let
+me know if this is acceptable to you.
+
+I think $their_name is a $description name, and so I would imagine you'd make a
+great $relationship.
+
+With $emotion,
+$your_name
