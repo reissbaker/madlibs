@@ -38,4 +38,9 @@ filepath = ARGV.first
 raise "No path given" if filepath.nil? || filepath.empty?
 
 madlib = generate_madlib(filepath)
+
+if STDOUT.isatty
+  STDERR.puts("\nGenerated:\n====================================\n")
+end
+
 puts madlib
